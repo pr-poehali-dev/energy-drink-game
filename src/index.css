@@ -96,6 +96,29 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-black text-white;
+  }
+  
+  .can-hover {
+    transition: transform 0.2s ease;
+  }
+  
+  .can-hover:hover {
+    transform: scale(1.05);
+  }
+}
+
+@layer components {
+  .game-button {
+    @apply bg-game-light border-2 border-game-silver rounded-lg px-4 py-2 text-white 
+           shadow-lg hover:bg-opacity-80 transition-all duration-200 flex items-center justify-center;
+  }
+  
+  .boost-button {
+    @apply game-button w-full my-2;
+  }
+  
+  .counter-digit {
+    @apply bg-game-dark/60 rounded px-1 border border-game-silver/30 text-game-silver inline-block;
   }
 }
